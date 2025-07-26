@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./asserts/css/header.css">
+    <style>
+        .card {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background-color: #e85f25;
+            /* Rustic Orange */
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-text {
+            margin: 0;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Top Navbar -->
+    <div class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo">
+                </a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <div class="search-box w-100 px-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-end nav-icons">
+                <!-- Trigger Button -->
+                <a href="./signup.html"><i class="bi bi-person text-dark"></i></a>
+                <a href="./wishlist.html"><i class="bi bi-heart text-dark"></i></a>
+                <div class="cart-icon position-relative">
+                    <a href="./cart.html"><i class="bi bi-cart text-dark"></i></a>
+                    <span class="badge bg-dark rounded-pill">1</span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Menu Links -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-center py-3 menu-links">
+                <div class="menu-item"><a href="./index.html">Home</a></div>
+                <div class="menu-item"><a href="./weddingCards.html" class="active">Wedding Invitation</a></div>
+                <div class="menu-item">
+                    <a href="#">Special Occasions</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Birthday Invitations</span></a>
+                        <a href="#"><span>Puberty Cards</span></a>
+                        <a href="#"><span>LuxuryInvitations</span></a>
+                        <a href="#"><span>Ear Boring Cards</span></a>
+                        <a href="#"><span>Engagement Cards</span></a>
+                        <a href="#"><span>House Warming</span></a>
+                        <a href="#"><span>Anniversary Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Theme Cards</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Beach Theme Cards</span></a>
+                        <a href="#"><span>Bride Theme Cards</span></a>
+                        <a href="#"><span>Box Cards</span></a>
+                        <a href="#"><span>Single Sheet Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Scroll Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Small Size Scroll</span></a>
+                        <a href="#"><span>Box Scroll</span></a>
+                        <a href="#"><span>Only Scroll</span></a>
+                        <a href="#"><span>High End Scroll</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Digital Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Whatsapp Cards</span></a>
+                        <a href="#"><span>Save the Date Cards</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Container -->
+    <div class="container py-5">
+        <h2 class="text-center fw-bold mb-5">WEDDING CARDS</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5">
+
+            <!-- Card 1 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Elegant_Kerala_Hindu_Wedding_Invitation-removebg-preview.png" alt="Hindu Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Hindu Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Elegant_Floral_Dusty_Blue_Christian_Wedding_Invitation___Zazzle-removebg-preview.png" alt="Christian Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Christian Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Minimal_Blue_White_Floral_Islamic_Muslim_Wedding_I_Invitation___Zazzle-removebg-preview.png" alt="Muslim Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Muslim Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Emerald_Green_Gold_Floral_Anand_Karaj_Sikh_Wedding____ShabzDesigns-removebg-preview.png" alt="Sikh Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Sikh Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/tumblr_818ae2f813d3af50714c333b9a5ab238_5cece1af_1280.jpg" alt="Interfaith Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Interfaith Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/download__10_-removebg-preview.png" alt="Exclusive Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Exclusive Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Indian_Hindu_Wedding_Royal_Golden_Peacock_Maroon____Rahul_-removebg-preview.png" alt="Traditional Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Traditional Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="./asserts/images/Indian_Wedding_Invitation__Ganesha_Invite_-_Multi-pack__Printable_Invitation__Instant_Download__Editable_Template__invite-multi-001__-_Etsy_UK-removebg-preview.png" alt="All Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">All Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Row 3: Card 9 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="..." alt="Minimal Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Minimal Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="..." alt="Rustic Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Rustic Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="..." alt="Floral Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Floral Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="col mb-5">
+                <a href="./hindhucards.html" class="card shadow text-center d-block h-100 text-decoration-none text-reset">
+                    <img src="..." alt="Luxury Wedding Cards" class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text fw-bold">Luxury Wedding Cards</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-dark pt-5 pb-3">
+        <div class="container-fluid">
+            <div class="row gy-4">
+
+                <!-- Logo & Description -->
+                <div class="col-md-3 text-center text-md-start">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo" class="img-fluid mb-2" style="max-height: 180px;">
+                    <p class="fw-bold mt-2">Largest Wedding<br>Cards Collections in<br>Chennai</p>
+                    <div class="mt-3">
+                        <p class="fw-bold mb-1">Follow us with</p>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3 social-icons">
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Information Links -->
+                <div class="col-md-3 text-center text-md-start info-links">
+                    <h4 class="fw-bold mb-3">Information</h4>
+                    <a href="./aboutus.html" class="footer-link d-block mb-2 text-decoration-none">About Us</a>
+                    <a href="./contactus.html" class="footer-link d-block mb-2 text-decoration-none">Contact Us</a>
+                    <a href="./FAQ.html" class="footer-link d-block mb-2 text-decoration-none">FAQ</a>
+                    <a href="./HowToOrder.html" class="footer-link d-block text-decoration-none">How to order wedding invitation
+                        online?</a>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="col-md-3 text-center text-md-start quick-access">
+                    <h4 class="fw-bold mb-3">Quick Access</h4>
+                  <a href="./index.html" class="footer-link d-block mb-2 text-decoration-none">Home</a>
+                    <a href="./weddingCards.html" class="footer-link d-block mb-2 text-decoration-none">Wedding Cards</a>
+                    <a href="./hindhucards.html" class="footer-link d-block text-decoration-none">Hindu Wedding Cards</a>
+             
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 text-center text-md-start">
+                    <h4 class="fw-bold mb-3">Contact Us</h4>
+                    <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 9876543210</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> wedtype@weddingcards.com</p>
+                    <p class="mb-2">Operating hours: 10.00Am to 10.00Pm</p>
+                    <p><strong>Monday - Sunday</strong></p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <hr class="mt-4">
+            <div class="text-center small">
+                <p class="mb-0"><i class="bi bi-c-circle me-1"></i>Wed knot craft India Private Limited. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS for Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fk1ijxFhTnNs9nA+T7zO+mPL7vF0mJQY7u5iKD7DBh+I3WlG2xLq+ElCmW0lU+gk"
+        crossorigin="anonymous"></script>
+
+    <script src="./asserts/js/dropdown.js"></script>
+
+</body>
+
+</html>

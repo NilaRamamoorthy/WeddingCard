@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- CSS -->
+ <link rel="stylesheet" href="./asserts/css/header.css">
+    <style>
+  .thumb-item {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .thumb-container {
+    flex: 0 0 auto;
+    margin-bottom: .75rem;
+  }
+
+  /* .thumb-item { cursor: pointer; max-width:100%; } */
+.thumb-item:hover { border-color: #f0ad4e; }
+.variant-img { cursor: default; }
+
+
+  .card {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: none;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      max-height: 200px;
+      object-fit: contain;
+      margin: auto;
+      display: block;
+    }
+
+    .card-title,
+    .card-text {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .heart-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .heart-icon.liked {
+      color: red;
+    }
+
+      
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Top Navbar -->
+    <div class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo">
+                </a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <div class="search-box w-100 px-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-end nav-icons">
+                <!-- Trigger Button -->
+                <a href="./signup.html"><i class="bi bi-person text-dark"></i></a>
+              <a href="./wishlist.html"><i class="bi bi-heart text-dark"></i></a> 
+                <div class="cart-icon position-relative">
+                   <a href="./cart.html"><i class="bi bi-cart text-dark"></i></a> 
+                    <span class="badge bg-dark rounded-pill">1</span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+<!-- Menu Links -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-center py-3 menu-links">
+                <div class="menu-item"><a href="./index.html" class="active">Home</a></div>
+                <div class="menu-item"><a href="./weddingCards.html">Wedding Invitation</a></div>
+                <div class="menu-item">
+                    <a href="#">Special Occasions</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Birthday Invitations</span></a>
+                        <a href="#"><span>Puberty Cards</span></a>
+                        <a href="#"><span>LuxuryInvitations</span></a>
+                        <a href="#"><span>Ear Boring Cards</span></a>
+                        <a href="#"><span>Engagement Cards</span></a>
+                        <a href="#"><span>House Warming</span></a>
+                        <a href="#"><span>Anniversary Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Theme Cards</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Beach Theme Cards</span></a>
+                        <a href="#"><span>Bride Theme Cards</span></a>
+                        <a href="#"><span>Box Cards</span></a>
+                        <a href="#"><span>Single Sheet Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Scroll Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Small Size Scroll</span></a>
+                        <a href="#"><span>Box Scroll</span></a>
+                        <a href="#"><span>Only Scroll</span></a>
+                        <a href="#"><span>High End Scroll</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Digital Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Whatsapp Cards</span></a>
+                        <a href="#"><span>Save the Date Cards</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container -->
+
+  <div class="container py-4">
+    <div class="row g-4 align-items-start">
+      <!-- Thumbnails column -->
+      <div class="col-12 col-sm-2">
+        <div class="thumb-container d-grid gap-2">
+          <img src="./asserts/images/Elegant_Kerala_Hindu_Wedding_Invitation-removebg-preview.png" class="img-fluid thumb-item selected" data-full="./asserts/images/Elegant_Kerala_Hindu_Wedding_Invitation-removebg-preview.png" alt="Variant 1">
+          <img src="./asserts/images/download__14_-removebg-preview.png" class="img-fluid thumb-item" data-full="./asserts/images/download__14_-removebg-preview.png" alt="Variant 2">
+          <img src="./asserts/images/Watercolor_Arabian_Lattice_Arch_Muslim_Wedding_Invitation-removebg-preview.png" class="img-fluid thumb-item" data-full="./asserts/images/Watercolor_Arabian_Lattice_Arch_Muslim_Wedding_Invitation-removebg-preview.png" alt="Variant 3">
+        </div>
+      </div>
+
+      <!-- Main image column -->
+      <div class="col-12 col-sm-5">
+        <img id="mainImage" src="./asserts/images/Elegant_Kerala_Hindu_Wedding_Invitation-removebg-preview.png" class="img-fluid rounded shadow" alt="Main product">
+      </div>
+
+      <!-- Details column -->
+      <div class="col-12 col-sm-5">
+        <h5>SKU Code: <span class="badge bg-secondary">KSN0054</span></h5>
+        <p class="fw-bold text-danger">Rs. 72.25 per unit inclusive of all taxes</p>
+
+        <div class="mb-3">
+          <label class="form-label"><strong>QTY:</strong></label>
+          <div class="input-group" style="max-width:140px;">
+            <button class="btn btn-warning" id="decrement" type="button">−</button>
+            <input type="text" id="qtyInput" class="form-control text-center" value="1" readonly>
+            <button class="btn btn-warning" id="increment" type="button">+</button>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2 mb-3">
+          <a href="./cart.html"><button class="btn btn-warning w-150">Buy Now</button></a>
+          <a href="./cart.html"><button class="btn btn-outline-dark w-150">Add to Cart</button></a>
+        </div>
+
+        <h6>Variants (same size/material, different theme)</h6>
+        <img src="./asserts/images/Watercolor_Arabian_Lattice_Arch_Muslim_Wedding_Invitation-removebg-preview.png" alt="Variant sample" class="img-thumbnail mt-2" style="max-width:100px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Description -->
+
+  <div class="container py-4">
+  <div class="row">
+    <!-- Description Column -->
+    <div class="col-12 col-md-6 mb-4">
+      <h5 class="fw-bold">DESCRIPTION:</h5>
+      <hr>
+      <p>The blue wedding card has embossed floral design with customized initial acrylic nameplate.</p>
+      <p>This invitation card has holding insert and an envelope</p>
+
+      <h5 class="fw-bold mt-4">ADDITIONAL COMMENTS</h5>
+      <hr>
+      <p>Discounts are applied based on quantity at checkout</p>
+    </div>
+
+    <!-- Additional Information Column -->
+    <div class="col-12 col-md-6 mb-4">
+      <h5 class="fw-bold">ADDITIONAL INFORMATION</h5>
+      <hr>
+      <div class="d-flex flex-wrap align-items-center">
+        <div class="me-4 mb-2 d-flex align-items-center">
+          <i class="bi bi-arrows-expand fs-4 text-danger me-2"></i>
+          <span><strong>Height:</strong> 27.5 cms</span>
+        </div>
+        <div class="me-4 mb-2 d-flex align-items-center">
+          <i class="bi bi-arrows-left-right fs-4 text-danger me-2"></i>
+          <span><strong>Width:</strong> 21 cms</span>
+        </div>
+        <div class="mb-2 d-flex align-items-center">
+          <i class="bi bi-bag fs-4 text-danger me-2"></i>
+          <span><strong>Weight:</strong> 110 grams</span>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <!-- Trigger Button -->
+<button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#weddingDetailsModal">
+  The Wedding Details
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="weddingDetailsModal" tabindex="-1" aria-labelledby="weddingDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="weddingDetailsLabel">Wedding Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-calendar-fill fs-4 text-warning me-2"></i>
+            <span><strong>Date:</strong> June 20, 2025</span>
+            <i class="bi bi-pencil ms-auto text-secondary"></i>
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-clock-fill fs-4 text-warning me-2"></i>
+            <span><strong>Time:</strong> 5:00 PM</span>
+            <i class="bi bi-pencil ms-auto text-secondary"></i>
+          </li>
+          <li class="d-flex align-items-center mb-0">
+            <i class="bi bi-geo-alt-fill fs-4 text-warning me-2"></i>
+            <span><strong>Location:</strong> Rose Garden Hall, City</span>
+            <i class="bi bi-pencil ms-auto text-secondary"></i>
+          </li>
+        </ul>
+        <div class="d-grid gap-2">
+          <a href="#" class="btn btn-warning">View map</a>
+          <a href="#" class="btn btn-outline-secondary">Add to calendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Card -->
+ <!-- Cards Container -->
+
+     <div class="container py-4">
+    <h3 class="text-center fw-bold">HINDU WEDDING CARDS</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+
+      <!-- Card Template -->
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="101"
+     data-title="The blue Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 72.25">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/1.jpg" class="card-img-top" alt="Card 1">
+          <div class="card-body text-center">
+            <h6 class="card-title">The blue Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 72.25</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="102"
+     data-title="Ganesha Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 25.25">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/2.jpg" class="card-img-top" alt="Card 2">
+          <div class="card-body text-center">
+            <h6 class="card-title">Ganesha Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 25.25</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="103"
+         data-title="Wedding Cards Favour Box"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs.  39.45">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/3.jpg" class="card-img-top" alt="Card 3">
+          <div class="card-body text-center">
+            <h6 class="card-title">Wedding Cards Favour Box</h6>
+            <p class="card-text text-danger fw-bold">Rs. 39.45</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="104" data-title="Theme Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 30.00">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/4.jpg" class="card-img-top" alt="Card 4">
+          <div class="card-body text-center">
+            <h6 class="card-title">Theme Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 30.00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2nd Row -->
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="105"  data-title="Vintage Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 30.15">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/5.jpg" class="card-img-top" alt="Card 5">
+          <div class="card-body text-center">
+            <h6 class="card-title">Vintage Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 30.15</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="106"  data-title="Elegant Peacock Wedding"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 15.00">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/6.jpg" class="card-img-top" alt="Card 6">
+          <div class="card-body text-center">
+            <h6 class="card-title">Elegant Peacock Wedding</h6>
+            <p class="card-text text-danger fw-bold">Rs. 15.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="107"  data-title="Unique Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 22.50">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/7.jpg" class="card-img-top" alt="Card 7">
+          <div class="card-body text-center">
+            <h6 class="card-title">Unique Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 22.50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 p-2 wish-card" data-id="108"  data-title="Wardrobe Wedding Cards"
+     data-img="https://i.imgur.com/1.jpg"
+     data-price="Rs. 59.75">
+          <i class="heart-icon bi bi-heart"></i>
+          <img src="https://i.imgur.com/8.jpg" class="card-img-top" alt="Card 8">
+          <div class="card-body text-center">
+            <h6 class="card-title">Wardrobe Wedding Cards</h6>
+            <p class="card-text text-danger fw-bold">Rs. 59.75</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-dark pt-5 pb-3">
+        <div class="container-fluid">
+            <div class="row gy-4">
+
+                <!-- Logo & Description -->
+                <div class="col-md-3 text-center text-md-start">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo" class="img-fluid mb-2" style="max-height: 180px;">
+                    <p class="fw-bold mt-2">Largest Wedding<br>Cards Collections in<br>Chennai</p>
+                    <div class="mt-3">
+                        <p class="fw-bold mb-1">Follow us with</p>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3 social-icons">
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Information Links -->
+                <div class="col-md-3 text-center text-md-start info-links">
+                    <h4 class="fw-bold mb-3">Information</h4>
+                    <a href="./aboutus.html" class="footer-link d-block mb-2 text-decoration-none">About Us</a>
+                    <a href="./contactus.html" class="footer-link d-block mb-2 text-decoration-none">Contact Us</a>
+                    <a href="./FAQ.html" class="footer-link d-block mb-2 text-decoration-none">FAQ</a>
+                    <a href="./HowToOrder.html" class="footer-link d-block text-decoration-none">How to order wedding invitation
+                        online?</a>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="col-md-3 text-center text-md-start quick-access">
+                    <h4 class="fw-bold mb-3">Quick Access</h4>
+                  <a href="./index.html" class="footer-link d-block mb-2 text-decoration-none">Home</a>
+                    <a href="./weddingCards.html" class="footer-link d-block mb-2 text-decoration-none">Wedding Cards</a>
+                    <a href="./hindhucards.html" class="footer-link d-block text-decoration-none">Hindu Wedding Cards</a>
+             
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 text-center text-md-start">
+                    <h4 class="fw-bold mb-3">Contact Us</h4>
+                    <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 9876543210</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> wedtype@weddingcards.com</p>
+                    <p class="mb-2">Operating hours: 10.00Am to 10.00Pm</p>
+                    <p><strong>Monday - Sunday</strong></p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <hr class="mt-4">
+            <div class="text-center small">
+                <p class="mb-0"><i class="bi bi-c-circle me-1"></i>Wed knot craft India Private Limited. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Bootstrap JS for Modal -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFY5S+onwW1aDdzZt5a6fQ7752B5KwxHJ2CzYl5YbGFk4eGg4pq5El9Qbs"
+  crossorigin="anonymous"></script>
+
+
+    <script src="./asserts/js/dropdown.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImg = document.getElementById('mainImage');
+  const thumbs = document.querySelectorAll('.thumb-item');
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      mainImg.src = thumb.dataset.full;
+      mainImg.alt = thumb.alt;
+      thumbs.forEach(t => t.classList.remove('border', 'border-warning'));
+      thumb.classList.add('border', 'border-warning');
+    });
+  });
+
+  const qtyInput = document.getElementById('qtyInput');
+  let qty = parseInt(qtyInput.value, 10) || 1;
+  document.getElementById('increment').addEventListener('click', () => {
+    qty++;
+    qtyInput.value = qty;
+  });
+  document.getElementById('decrement').addEventListener('click', () => {
+    if (qty > 1) qty--;
+    qtyInput.value = qty;
+  });
+});
+</script>
+<script src="./asserts/js/productCards.js"></script>
+
+
+</body>
+
+</html>

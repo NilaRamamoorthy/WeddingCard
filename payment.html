@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- CSS -->
+ <link rel="stylesheet" href="./asserts/css/header.css">
+    <style>
+      
+
+        /* Modal Window*/
+        .auth-tab {
+            cursor: pointer;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .auth-tab:hover {
+            color: white !important;
+        }
+
+        .active-tab {
+            color: black;
+            font-weight: 700;
+        }
+
+        .auth-form input {
+            margin-bottom: 10px;
+        }
+
+        .auth-form {
+            transition: all 0.3s ease-in-out;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Top Navbar -->
+    <div class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo">
+                </a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <div class="search-box w-100 px-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-end nav-icons">
+                <!-- Trigger Button -->
+                <a href="./signup.html"><i class="bi bi-person text-dark"></i></a>
+              <a href="./wishlist.html"><i class="bi bi-heart text-dark"></i></a> 
+                <div class="cart-icon position-relative">
+                   <a href="./cart.html"><i class="bi bi-cart text-dark"></i></a> 
+                    <span class="badge bg-dark rounded-pill">1</span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Menu Links -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-center py-3 menu-links">
+                <div class="menu-item"><a href="./index.html" class="active">Home</a></div>
+                <div class="menu-item"><a href="./weddingCards.html">Wedding Invitation</a></div>
+                <div class="menu-item">
+                    <a href="#">Special Occasions</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Birthday Invitations</span></a>
+                        <a href="#"><span>Puberty Cards</span></a>
+                        <a href="#"><span>LuxuryInvitations</span></a>
+                        <a href="#"><span>Ear Boring Cards</span></a>
+                        <a href="#"><span>Engagement Cards</span></a>
+                        <a href="#"><span>House Warming</span></a>
+                        <a href="#"><span>Anniversary Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Theme Cards</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Beach Theme Cards</span></a>
+                        <a href="#"><span>Bride Theme Cards</span></a>
+                        <a href="#"><span>Box Cards</span></a>
+                        <a href="#"><span>Single Sheet Cards</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Scroll Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Small Size Scroll</span></a>
+                        <a href="#"><span>Box Scroll</span></a>
+                        <a href="#"><span>Only Scroll</span></a>
+                        <a href="#"><span>High End Scroll</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a href="#">Digital Invitation</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><span>Whatsapp Cards</span></a>
+                        <a href="#"><span>Save the Date Cards</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment -->
+     <div class="container py-4">
+  <div class="row">
+    <!-- Left Column: Payment Options -->
+    <div class="col-12 col-md-7 mb-4">
+      <div class="card p-3 shadow-sm">
+        <div class="d-flex justify-content-around align-items-center mb-3">
+          <img src="./asserts/icons/master card.png" alt="Mastercard" style="max-height:40px;">
+          <img src="./asserts/icons/visa.png" alt="Visa" style="max-height:40px;">
+          <img src="./asserts/icons/paypal.png" alt="PayPal" style="max-height:40px;">
+          <img src="./asserts/icons/phonepe.png" alt="UPI" style="max-height:40px;">
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="payment" id="paytmOption" checked>
+          <div class="d-flex justify-content-between">
+          <label class="form-check-label fw-bold" for="paytmOption">Paytm</label>
+          <img src="./asserts/icons/phonepe.png" alt="Paytm UPI" class="ms-2" >
+          </div>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="payment" id="gpayOption">
+          <div class="d-flex justify-content-between">
+          <label class="form-check-label fw-bold" for="gpayOption">GPay</label>
+          <img src="./asserts/icons/gpay.png" alt="GPay" class="ms-2" >
+          </div>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="radio" name="payment" id="phonepeOption">
+          <div class="d-flex justify-content-between">
+          <label class="form-check-label fw-bold" for="phonepeOption">PhonePe</label>
+          <img src="./asserts/icons/phonepe.png" alt="PhonePe" class="ms-2">
+          </div>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="radio" name="payment" id="credOption">
+          <div class="d-flex justify-content-between">
+          <label class="form-check-label fw-bold" for="credOption">Cred</label>
+          <img src="./asserts/icons/visa.png" alt="Cred" class="ms-2" >
+          </div>
+        </div>
+        <div class="accordion" id="codAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="codHeader">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#codCollapse">
+                <i class="bi bi-cash fs‑5 me‑2"></i> Cash on Delivery
+              </button>
+            </h2>
+            <div id="codCollapse" class="accordion-collapse collapse" data-bs-parent="#codAccordion">
+              <div class="accordion-body">
+                Pay by cash at the time of delivery.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 small text-muted">
+          <i class="bi bi-info-circle me‑1"></i> Credit card payments may take up to 24 hours to process.<br>
+          <div class="form-check mt‑2">
+            <input class="form-check-input" type="checkbox" id="savePayment">
+            <label class="form-check-label" for="savePayment">Save my payment details for future purchase</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Order Summary -->
+    <div class="col-12 col-md-5">
+      <div class="card p-3 shadow-sm">
+        <h4 class="mb-3 border-bottom pb-2">Order Summary</h4>
+        <div class="d-flex justify-content-between">
+        <div></div>
+        <div class="date-time-display">
+  <p id="currentDate" class="mb-1"></p>
+  <p id="currentTime" class="mb-1"></p>
+</div>
+</div>
+
+        <hr>
+        <h5 class="mb-3">Products</h5>
+        <div class="d-flex justify-content-between">
+          <span>The Blue Wedding Card</span><span>2</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span>Added Compliment</span><span>Hold Bag</span>
+        </div>
+        <hr>
+        <div class="py-2 px-2 bg-light rounded mb-3">
+          <strong>MAR0057</strong> <span class="text-success ms-2">Coupon Applied</span>
+        </div>
+        <div class="d-flex justify-content-between fw-bold text-warning">
+          <span>Subtotal</span><span>Rs. 153.40</span>
+        </div>
+        <div class="d-flex justify-content-between mb-3 small">
+          <span>Shipping</span><span>0.00 <span class="badge bg-secondary">Free</span></span>
+        </div>
+        <a href="./orderConfirmned.html"><button class="btn btn-warning w-100">Pay Rs. 153.40</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    <!-- Footer -->
+    <footer class="text-dark pt-5 pb-3">
+        <div class="container-fluid">
+            <div class="row gy-4">
+
+                <!-- Logo & Description -->
+                <div class="col-md-3 text-center text-md-start">
+                    <img src="./asserts/images/download__23_-removebg-preview.png" alt="Logo" class="img-fluid mb-2" style="max-height: 180px;">
+                    <p class="fw-bold mt-2">Largest Wedding<br>Cards Collections in<br>Chennai</p>
+                    <div class="mt-3">
+                        <p class="fw-bold mb-1">Follow us with</p>
+                        <div class="d-flex justify-content-center justify-content-md-start gap-3 social-icons">
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-dark fs-4"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Information Links -->
+                <div class="col-md-3 text-center text-md-start info-links">
+                    <h4 class="fw-bold mb-3">Information</h4>
+                    <a href="./aboutus.html" class="footer-link d-block mb-2 text-decoration-none">About Us</a>
+                    <a href="./contactus.html" class="footer-link d-block mb-2 text-decoration-none">Contact Us</a>
+                    <a href="./FAQ.html" class="footer-link d-block mb-2 text-decoration-none">FAQ</a>
+                    <a href="./HowToOrder.html" class="footer-link d-block text-decoration-none">How to order wedding invitation
+                        online?</a>
+                </div>
+
+                <!-- Quick Access -->
+                <div class="col-md-3 text-center text-md-start quick-access">
+                    <h4 class="fw-bold mb-3">Quick Access</h4>
+                  <a href="./index.html" class="footer-link d-block mb-2 text-decoration-none">Home</a>
+                    <a href="./weddingCards.html" class="footer-link d-block mb-2 text-decoration-none">Wedding Cards</a>
+                    <a href="./hindhucards.html" class="footer-link d-block text-decoration-none">Hindu Wedding Cards</a>
+             
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-3 text-center text-md-start">
+                    <h4 class="fw-bold mb-3">Contact Us</h4>
+                    <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i> +91 9876543210</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i> wedtype@weddingcards.com</p>
+                    <p class="mb-2">Operating hours: 10.00Am to 10.00Pm</p>
+                    <p><strong>Monday - Sunday</strong></p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <hr class="mt-4">
+            <div class="text-center small">
+                <p class="mb-0"><i class="bi bi-c-circle me-1"></i>Wed knot craft India Private Limited. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Bootstrap JS for Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fk1ijxFhTnNs9nA+T7zO+mPL7vF0mJQY7u5iKD7DBh+I3WlG2xLq+ElCmW0lU+gk"
+        crossorigin="anonymous"></script>
+
+    <script src="./asserts/js/dropdown.js"></script>
+
+    <script>
+  function formatTwoDigits(n) {
+    return n < 10 ? '0' + n : n;
+  }
+
+  function updateDateTime() {
+    const now = new Date();
+    const day = formatTwoDigits(now.getDate());
+    const month = formatTwoDigits(now.getMonth() + 1);
+    const year = now.getFullYear();
+    const hours = formatTwoDigits(now.getHours());
+    const minutes = formatTwoDigits(now.getMinutes());
+    const seconds = formatTwoDigits(now.getSeconds());
+
+    document.getElementById('currentDate').textContent =
+      `Date: ${year}-${month}-${day}`;
+
+    document.getElementById('currentTime').textContent =
+      `Time: ${hours}:${minutes}:${seconds}`;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    updateDateTime();            // initial set
+    setInterval(updateDateTime, 1000); // update every second
+  });
+</script>
+
+
+</body>
+
+</html>
