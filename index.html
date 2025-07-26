@@ -13,6 +13,74 @@
 <!-- CSS -->
  <link rel="stylesheet" href="./asserts/css/header.css">
     <style>
+
+        /* Hero Section */
+    
+    .hero-section {
+  background: url('./asserts/images/heroimg.png') no-repeat center center;
+  background-size: cover; /* 🔥 This ensures it fits in */
+  /* background-attachment: fixed; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+    .hero-card {
+      background-color: rgb(252, 241, 241);
+      max-width: 850px;
+      height: 480px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .hero-card h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .hero-card p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-card .btn {
+      background-color: #f5a200;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .hero-card .btn:hover {
+      background-color: #d48800;
+    }
+
+    @media (max-width: 600px) {
+      .hero-card {
+        padding: 30px 20px;
+      }
+
+      .hero-card h2 {
+        font-size: 20px;
+      }
+
+      .hero-card p {
+        font-size: 14px;
+      }
+    }
       /* Carousel */
       
 
@@ -423,6 +491,80 @@ color: white;
         width: 100%;
       }
     }
+
+    /* Product Cards */
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      padding: 10px;
+    }
+
+    .product-content {
+      padding: 15px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .icons {
+      display: flex;
+      gap: 40px;
+    }
+
+    .icons i {
+      font-size: 18px;
+      color: #222;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .icons i:hover {
+      color: #ff9800;
+    }
     </style>
 </head>
 
@@ -507,6 +649,19 @@ color: white;
             </div>
         </div>
     </div>
+
+
+    <!-- Hero Section -->
+
+    <div class="hero-section">
+  <div class="hero-card d-flex justify-content-center align-items-center text-center">
+    <div>
+    <h2>Your Love Story Begins Here</h2>
+    <p>Create stunning wedding invitations that capture the essence of your special day. Elegant designs, heartfelt words, and everything you need to make your first impression unforgettable.</p>
+    <a href="./weddingCards.html" class="btn text-center">Get your style</a>
+    </div>
+  </div>
+</div>
 <!-- Image Carousel -->
  <div class="caro">
 <div class="carousel-container">
@@ -593,6 +748,98 @@ color: white;
     <img src="./asserts/images/img1.png" width="600" class="img-fluid">
     <img src="./asserts/images/img2.png" width="600" class="img-fluid">
   </div>
+
+
+
+  <!-- Products -->
+
+  <div class="product-grid my-5">
+
+  <div class="product-card">
+    <img src="./asserts/images/Doli_Themed_Book_Style_Semi_Box_Dulah_Dulhan_Themed_Flower_Themed_Hindu_Wedding_Sikh_Wedding_Padded_Wedding_invitation_Cards_-_EJ3003-removebg-preview.png" alt="Red Invite">
+    <div class="product-content">
+      <div class="product-title">Red Invite Card with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.10.25</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="./asserts/images/Download_Decorative_Hindu_Wedding_Card_Vector_for_free-removebg-preview.png" alt="Red & Yellow">
+    <div class="product-content">
+      <div class="product-title">Simple Red and Yellow Card Invite with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.5.00</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="./asserts/images/Hindu_Low_Cost_Wedding_Invitation_Card_Design-removebg-preview.png" alt="Vertical Red Invite">
+    <div class="product-content">
+      <div class="product-title">Red vertical Personal Invite with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.7.00</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="./asserts/images/Gate_fold_Indian_wedding_Invitation_in_light_brown_with_floral_motifs-removebg-preview.png" alt="Red Vertical Invite">
+    <div class="product-content">
+      <div class="product-title">Red vertical Personal Invite with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.7.50</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="./asserts/images/Hindu_Wedding_Cards_Online___Traditional_Designs_for_Sacred_Ceremonies-removebg-preview.png" alt="Vinayagar Brown">
+    <div class="product-content">
+      <div class="product-title">Brown with Vinayagar Picture Invite with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.7.00</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="./asserts/images/Nepali_Wedding_Invitation_Digital_Template__Editable_Nepali_Wedding_Invitation-removebg-preview.png" alt="Rangoli Maroon">
+    <div class="product-content">
+      <div class="product-title">Meroon card with Rangoli Theme Personal Invite with Bride And Groom Names</div>
+      <div class="product-footer">
+        <div class="price">Rs.9.00</div>
+        <div class="icons">
+          <i class="far fa-heart"></i>
+          <i class="fas fa-bag-shopping"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
   <!-- Summer Sale -->
    
